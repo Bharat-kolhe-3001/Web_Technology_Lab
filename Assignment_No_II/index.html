@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <div class="input-section">
+            <input id="taskInput" type="text" placeholder="Enter a new task...">
+            <input id="taskDate" type="date">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <table id="taskTable" border="1" width="100%" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Complete</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="taskBody">
+                <tr class="empty-state">
+                    <td colspan="4" style="text-align: center; font-style: italic;">No tasks yet. Add one above!</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
