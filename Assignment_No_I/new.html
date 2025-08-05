@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmer Info Portal</title>
+  <link rel="stylesheet" href="newstyle.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-row">
+        <div class="branding">
+          <img src="logo.jpg" alt="Logo" class="logo" />
+          <div class="title-block">
+            <h1>Farmer Info Portal</h1>
+            <p>Breadwinner of the World</p>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#register">Register</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <img src="farmer.jpeg" alt="Farmer" class="farmer-icon" />
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-text">
+          <h2>Welcome to Farmer Portal</h2>
+          <p>Empowering farmers with modern technology and government support. Register today to access various schemes and benefits.</p>
+        </div>
+        <div class="hero-image">
+          <img src="home.jpg" alt="Farmer in field" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="register" class="registration">
+    <div class="container">
+      <h2 class="section-title">Farmer Registration</h2>
+      <p class="section-subtitle">Fill in your details to register with our portal</p>
+
+      <form id="farmerForm" class="form">
+        <div class="form-block">
+          <h3 class="form-heading">Personal Information</h3>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Farmer Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" required />
+            </div>
+            <div class="form-field">
+              <label for="mobile">Mobile Number:</label>
+              <input type="tel" id="mobile" name="mobile" required />
+            </div>
+            <div class="form-field">
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="form-block">
+          <h3 class="form-heading">Farm Details</h3>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="landType">Type of Land:</label>
+              <select id="landType" name="landType" required>
+                <option value="">Select Land Type</option>
+                <option value="irrigated">Irrigated</option>
+                <option value="rain-fed">Rain-fed</option>
+                <option value="dry">Dry Land</option>
+                <option value="wetland">Wetland</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="landArea">Land Area:</label>
+              <input type="text" id="landArea" name="landArea" placeholder="e.g., 5 Acres" required />
+            </div>
+            <div class="form-field">
+              <label for="soilType">Soil Type:</label>
+              <select id="soilType" name="soilType" required>
+                <option value="">Select Soil Type</option>
+                <option value="black">Black Soil</option>
+                <option value="red">Red Soil</option>
+                <option value="alluvial">Alluvial Soil</option>
+                <option value="sandy">Sandy Soil</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="waterSource">Water Source:</label>
+              <select id="waterSource" name="waterSource" required>
+                <option value="">Select Water Source</option>
+                <option value="well">Well</option>
+                <option value="borewell">Borewell</option>
+                <option value="canal">Canal</option>
+                <option value="river">River</option>
+              </select>
+            </div>
+            <div class="form-field full-width">
+              <label for="equipment">Equipment Owned:</label>
+              <textarea id="equipment" name="equipment" placeholder="e.g., Tractor, Pump, Harvester"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-section">
+          <button  id="submit_btn"type="submit" class="btn-primary">Register Farmer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Farmer Info Portal</h2>
+      <p class="section-subtitle">Dedicated to empowering farmers with modern tools and support</p>
+
+      <div class="about-row">
+        <div class="about-text">
+          <h3>Our Mission</h3>
+          <p>To create a platform that bridges the gap between farmers and modern agricultural resources, ensuring sustainability and improved livelihoods.</p>
+          <h3>Our Vision</h3>
+          <p>A world where every farmer has access to the knowledge, tools, and support needed to feed the growing population sustainably.</p>
+        </div>
+        <div class="about-image">
+          <img src="Working-with-together.jpeg" alt="Farmers working together" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive support services for farmers</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Crop Advisory</h4>
+          <p>Expert advice on crop selection and farming techniques.</p>
+          <ul>
+            <li>Seasonal crop recommendations</li>
+            <li>Pest and disease management</li>
+            <li>Organic farming guidance</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h4>Market Linkage</h4>
+          <p>Connect directly with buyers and get fair prices.</p>
+          <ul>
+            <li>Direct buyer connection</li>
+            <li>Price transparency</li>
+            <li>Quality certification</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h4>Weather Updates</h4>
+          <p>Real-time weather forecasts and advisories.</p>
+          <ul>
+            <li>7-day weather forecast</li>
+            <li>Rainfall predictions</li>
+            <li>Farming advisories</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>Email: bharatkolhe20@gmail.com</p>
+          <p>Mobile: +91 9860053992</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#register">Register</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <p>Facebook | Twitter | Instagram</p>
+        </div>
+        <div class="footer-column">
+          <h3>Support Center</h3>
+          <p>Farmer Support Center<br />Main Road<br />Maharashtra - 423603</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Farmer Info Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("submit_btn").addEventListener("click", function(){
+        alert("The Form Has Been Submited");
+       
+    });
+
+  </script>
+</body>
+</html>
