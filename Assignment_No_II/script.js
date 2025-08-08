@@ -1,69 +1,58 @@
-document.getElementById("addBtn").addEventListener("click", function () {
-    let title = document.getElementById("taskInput").value;
-    let date = document.getElementById("taskDate").value;
-    let taskBody = document.getElementById("taskBody");
 
-    if (title.trim() === "") {
-        alert("Please enter a task!");
+let taskInput = document.getElementById('taskInput');
+let taskDate = document.getElementById('taskDate');
+let addBtn = document.getElementById('addBtn');
+let taskBody = document.getElementById('taskBody');
+
+
+
+addBtn.addEventListener('click', function () {
+    let task = taskInput.value;
+    let date = taskDate.value;
+
+    if (task === '' || date === '') {
+        alert("Please enter both task and date.");
         return;
     }
 
+    addTaskToTable(task, date);
+
     
-    let empty = document.querySelector(".empty-state");
-    if (empty) {
-        taskBody.removeChild(empty);
-    }
+    taskInput.value = '';
+    taskDate.value = '';
+});
 
- 
-    let row = document.createElement("tr");
 
- 
-    let taskCell = document.createElement("td");
-    taskCell.textContent = title;
 
- 
-    let dateCell = document.createElement("td");
-    dateCell.textContent = date;
 
- 
-    let checkCell = document.createElement("td");
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.addEventListener("change", function () {
-        if (this.checked) {
-            taskCell.style.textDecoration = "line-through";
-            taskCell.style.color = "#888";
-        } else {
-            taskCell.style.textDecoration = "none";
-            taskCell.style.color = "#000";
-        }
-    });
-    checkCell.appendChild(checkbox);
-
-  
-    let deleteCell = document.createElement("td");
-    let deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.style.backgroundColor = "red";
-    deleteBtn.style.color = "white";
-    deleteBtn.style.border = "none";
-    deleteBtn.style.padding = "5px 10px";
-    deleteBtn.style.cursor = "pointer";
-
+function addTaskToTable(task, date) {
    
+    
+    let row = document.createElement('tr');
 
-    deleteCell.appendChild(deleteBtn);
-
-  
-    row.appendChild(taskCell);
-    row.appendChild(dateCell);
-    row.appendChild(checkCell);
-    row.appendChild(deleteCell);
-
+    row.innerHTML = `
+        <td>${task}</td>
+        <td>${date}</td>
+        <td><input type="checkbox" onchange="markCompleted(this)"></td>
+        <td><button class="delete-btn" onclick="deleteTask(this)">Delete</button></td>
+    `;
 
     taskBody.appendChild(row);
+}
 
-   
-    document.getElementById("taskInput").value = "";
-    document.getElementById("taskDate").value = "";
-});
+
+function markCompleted(checkbox) {
+    let row = checkbox.closest('tr');
+    if (checkbox.checked) {
+        row.classList.add('completed');
+    } else {
+        row.classList.remove('completed');
+    }
+}
+
+
+function deleteTask(button) {
+    let row = button.closest('tr');
+    row.remove();
+
+}
