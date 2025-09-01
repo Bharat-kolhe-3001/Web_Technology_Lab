@@ -7,10 +7,11 @@
 </head>
 <body>
   <h2>Enter Product Details</h2>
-  <form action="POSTMETHODPHP.php" method="POST">
+  <form action="POSTMETHODPHP.php" method="POST">//here We used Post method  
     Product ID: <input type="text" name="PId"><br><br>
     Product Price: <input type="text" name="PPRICE"><br><br>
     <input type="submit" value="Submit">
   </form>
 </body>
 </html>
+
