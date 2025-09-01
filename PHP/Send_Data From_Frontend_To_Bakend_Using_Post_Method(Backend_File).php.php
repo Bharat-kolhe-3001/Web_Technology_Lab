@@ -4,8 +4,9 @@
 
  $rawData = file_get_contents('php://input');
 
- $data = json_decode($rawData,  true);
+ $data = json_decode($rawData,  true);//addreasing array convert into json file
 
  echo json_encode($data);
+
 
 ?>
