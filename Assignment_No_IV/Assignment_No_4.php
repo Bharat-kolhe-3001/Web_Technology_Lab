@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Student CRUD</title>
 </head>
 <body>
-    <form id="Form">
-        <div class="input">
-            Enter Id <input type="text" id="id" placeholder="Enter Your Id">
-            Enter Name  <input type="text" id="Name" placeholder="Enter Your Name"><br><br>
-            <h1 id="Menu">MENU</h1>
-            <hr>
-        </div>
+  <h2>Student Management</h2>
 
-        <div class="card">
-            <button type="button" id="insertbtn">Insert</button><br>
-            <button type="button" id="displaybtn">Display</button><br>
-            <button type="button" id="updatebtn">Update</button><br>
-            <button type="button" id="deletebtn">Delete</button><br>
-            <hr>
-        </div>
-    </form>
 
-     
-    <div id="result"></div>
+  <div>
+    <h3>Insert Student</h3>
+    Id: <input type="text" id="insert_id"><br><br>
+    Name: <input type="text" id="insert_name"><br><br>
+    <button onclick="insertData()">Insert</button>
+  </div>
+  <hr>
 
-    <script>
-        async function sendData(action) {
-            let id = document.getElementById("id").value;
-            let name = document.getElementById("Name").value;
 
-            let FormData1 = new FormData();
-            FormData1.append("sid", id);
-            FormData1.append("sname", name);
-            FormData1.append("action", action);
+  <div>
+    <h3>Delete Student</h3>
+    Id: <input type="text" id="delete_id"><br><br>
+    <button onclick="deleteData()">Delete</button>
+  </div>
+  <hr>
 
-            let response = await fetch("http://localhost/Assignemnt_No_4_PHP.php", {
-                method: "POST",
-                body: FormData1
-            });
+ 
+  <div>
+    <h3>Update Student</h3>
+    Old Id : <input type="text" id="old_id"><br><br>
+    New Name: <input type="text" id="new_name"><br><br>
+    <button onclick="updateData()">Update</button>
+  </div>
+  <hr>
 
-            let result = await response.text();
-            document.getElementById("result").innerHTML = result;
-        }
 
-        document.getElementById("insertbtn").addEventListener("click", () => sendData("insert"));
-        document.getElementById("displaybtn").addEventListener("click", () => sendData("display"));
-        document.getElementById("updatebtn").addEventListener("click", () => sendData("update"));
-        document.getElementById("deletebtn").addEventListener("click", () => sendData("delete"));
-    </script>
+  <div>
+    <h3>All Students</h3>
+    <button onclick="displayData()">Display</button>
+  </div>
+
+  <hr>
+  <div id="result"></div>
+
+  <script>
+    async function insertData() {
+      let fd = new FormData();
+      fd.append("action", "insert");
+      fd.append("sid", document.getElementById("insert_id").value);
+      fd.append("sname", document.getElementById("insert_name").value);
+
+      let res = await fetch("http://localhost/Assignment_No_4_PHP.php", { method: "POST", body: fd });
+      document.getElementById("result").innerHTML = await res.text();
+    }
+
+    async function deleteData() {
+      let fd = new FormData();
+      fd.append("action", "delete");
+      fd.append("sid", document.getElementById("delete_id").value);
+
+      let res = await fetch("http://localhost/Assignment_No_4_PHP.php", { method: "POST", body: fd });
+      document.getElementById("result").innerHTML = await res.text();
+    }
+
+    async function updateData() {
+      let fd = new FormData();
+      fd.append("action", "update");
+      fd.append("oldid", document.getElementById("old_id").value);
+      fd.append("newname", document.getElementById("new_name").value);
+
+      let res = await fetch("http://localhost/Assignment_No_4_PHP.php", { method: "POST", body: fd });
+      document.getElementById("result").innerHTML = await res.text();
+    }
+
+    async function displayData() {
+      let fd = new FormData();
+      fd.append("action", "display");
+
+      let res = await fetch("http://localhost/Assignment_No_4_PHP.php", { method: "POST", body: fd });
+      document.getElementById("result").innerHTML = await res.text();
+    }
+  </script>
 </body>
 </html>
