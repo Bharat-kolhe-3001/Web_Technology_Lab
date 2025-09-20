@@ -21,7 +21,7 @@
     <h3>Delete Student</h3>
     Id: <input type="text" id="delete_id"><br><br>
     <button onclick="deleteData()">Delete</button>
-  </div>
+  </div> 
   <hr>
 
  
