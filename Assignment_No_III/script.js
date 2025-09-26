@@ -16,7 +16,7 @@ async function fetchUsers() {
  
     resultDiv.innerHTML = "";
  
-    let table = document.createElement("table");
+    let table = document.createElement("table"); 
     table.border = "2"; 
 
    
@@ -43,3 +43,4 @@ async function fetchUsers() {
     console.log("Error fetching data:", error);
   }
 }
+
