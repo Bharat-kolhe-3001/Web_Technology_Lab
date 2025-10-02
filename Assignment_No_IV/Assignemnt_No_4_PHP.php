@@ -19,7 +19,7 @@ function deleteStudent($conn, $id){
     $stat->bind_param("i", $id);
     if($stat->execute()){
         echo "<p>Record Deleted Successfully (ID=$id)</p>";
-    }
+    } 
 }
 
  
