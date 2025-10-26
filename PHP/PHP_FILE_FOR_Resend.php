@@ -6,7 +6,7 @@ $marks = $_POST['smarks'];
 
 $arr = ["StudentName" => $name,
     "StudentMarks" => $marks];
-
+ 
 
 header('Content-Type: application/json');
 
