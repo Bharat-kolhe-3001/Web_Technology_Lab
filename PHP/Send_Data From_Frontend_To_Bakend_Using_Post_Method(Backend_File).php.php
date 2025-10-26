@@ -6,7 +6,7 @@
 
  $data = json_decode($rawData,  true);//json data convert into addreasing array
 
- echo json_encode($data);//addreasing array convert into json file
+ echo json_encode($data);//addreasing array convert into json file 
 
 
 ?>
