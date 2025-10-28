@@ -6,7 +6,7 @@ let taskBody = document.getElementById('taskBody');
 
 
 
-addBtn.addEventListener('click', function () {
+addBtn.addEventListener('click', function () { 
     let task = taskInput.value;
     let date = taskDate.value;
 
@@ -56,3 +56,4 @@ function deleteTask(button) {
     row.remove();
 
 }
+
