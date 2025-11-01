@@ -8,8 +8,7 @@ app.use(express.json());
 
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, "public")));
-
-// Sample student data (in-memory)
+   
 let students = [
   { id: 1, name: "Bharat", age: 20 },
   { id: 2, name: "Tushar", age: 21 },
