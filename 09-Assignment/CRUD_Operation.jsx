@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const PORT = 5000;
 
-// Middleware to parse JSON body data
+// Middleware to parse JSON body data 
 app.use(express.json());
 
 // Serve static files from "public" folder
