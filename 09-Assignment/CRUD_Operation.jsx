@@ -16,7 +16,7 @@ let students = [
 
 // ---------- Basic Routes ----------
 
-// Home route
+// Home route 
 app.get("/", (req, res) => {
   res.send("Welcome to the Student API Server!");
 });
