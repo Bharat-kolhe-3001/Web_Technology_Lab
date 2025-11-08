@@ -8,7 +8,7 @@ button.addEventListener("click", fetchUsers);
  
 async function fetchUsers() {
   try {
-    
+     
     let response = await fetch("https://jsonplaceholder.typicode.com/users");
 
    
