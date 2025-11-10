@@ -12,7 +12,7 @@ function App() {
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
         setData(response.data);     // Store the data
-        setLoading(false);          // Stop loading
+        setLoading(false);          // Stop loading  
       })
       .catch((err) => {
         setError("Error fetching data!"); // Set error message
