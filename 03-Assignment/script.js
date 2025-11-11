@@ -4,7 +4,7 @@ const resultDiv = document.getElementById("result");
 
  
 button.addEventListener("click", fetchUsers);
-
+   
  
 async function fetchUsers() {
   try {
@@ -43,4 +43,5 @@ async function fetchUsers() {
     console.log("Error fetching data:", error);
   }
 }
+
 
