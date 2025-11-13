@@ -6,7 +6,7 @@
 </head>
 <body>
   <h2>Student Management</h2>
-
+   
 
   <div>
     <h3>Insert Student</h3>
@@ -82,3 +82,4 @@
   </script>
 </body>
 </html>
+
