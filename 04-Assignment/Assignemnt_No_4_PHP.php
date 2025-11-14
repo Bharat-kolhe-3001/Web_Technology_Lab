@@ -5,13 +5,17 @@ if($conn->connect_errno){
     exit();
 }
 
+//insert function 
+
 function insertStudent($conn, $id, $name){
     $stat = $conn->prepare("INSERT INTO student (id, name) VALUES (?, ?)");
     $stat->bind_param("is", $id, $name);
     if($stat->execute()){ 
         echo "<p>Record Inserted Successfully (ID=$id, Name=$name)</p>";
     }
-}
+}.  
+
+
 
 
 function deleteStudent($conn, $id){
