@@ -16,7 +16,7 @@ function insertStudent($conn, $id, $name){
 }.  
 
 
-
+//delete function 
 
 function deleteStudent($conn, $id){
     $stat = $conn->prepare("DELETE FROM student WHERE id=?");
