@@ -24,7 +24,7 @@
   </div> 
   <hr>
 
- 
+ //update Student 
   <div>
     <h3>Update Student</h3>
     Old Id : <input type="text" id="old_id"><br><br>
