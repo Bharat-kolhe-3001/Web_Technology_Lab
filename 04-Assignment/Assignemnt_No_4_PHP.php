@@ -9,7 +9,7 @@ if($conn->connect_errno){
 
 function insertStudent($conn, $id, $name){
     $stat = $conn->prepare("INSERT INTO student (id, name) VALUES (?, ?)");
-    $stat->bind_param("is", $id, $name);
+    $stat->bind_param("is", $id, $name);  
     if($stat->execute()){ 
         echo "<p>Record Inserted Successfully (ID=$id, Name=$name)</p>";
     }
@@ -64,5 +64,6 @@ if($action == "display" || $action == "insert" || $action == "delete" || $action
     displayStudents($conn);
 }
 ?>
+
 
 
